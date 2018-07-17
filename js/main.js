@@ -1,15 +1,23 @@
 $(document).ready(function(){
-  var listItem = $('li');
-  // listItem.css({
-  //   'padding': '50px',
-  //   'margin-bottom': '50px'
-  // });
+    var largeHeader = $('h1');
+    largeHeader.css({
+        'font-size': '100px',
+        'color': 'green',
+        'margin-bottom': '20px'
+    })
 
-  listItem.on('click', function(e) {
-    // $('li span').remove();
-    var date = new Date();
-    date.setTime(e.timeStamp);
-    var clicked = date.toDateString();
-    $(this).append('<span class="date">' + clicked + ' ' + e.type + '</span>')
-  });
+    $('h2').addClass('second-header')
+
+    $('h1').append('This is appended');
+
+});
+
+$(function(){
+    $('p').removeClass('new-class');
+
+    $('h2').on('click', function(e){
+        $(this).css({
+            'background-color': 'none'
+        });
+    });
 });
